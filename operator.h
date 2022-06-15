@@ -8,9 +8,11 @@
 #ifndef OPERATOR_H
 #define OPERATOR_H
 
+#include <iostream>
 #include <string>
 #include <sstream>
 #include <iomanip>
+
 
 typedef enum{VOX, INTERNET} OperatorType;
 
@@ -45,5 +47,114 @@ public:
   virtual double calculateMessageCost(int, int, int) = 0;
   virtual double calculateNetworkCost(double) = 0;
 };
+
+Operator::Operator(int ID, double TC, double MC, double NC, int discount, OperatorType t)
+{
+  id = ID;
+  talkingCharge = TC;
+  messageCost = MC;
+  networkCharge = NC;
+  discountRate = discount;
+  type = t;
+  totalSpentTalkingTime = 0;
+  totalMessageSent = 0;
+  totalInternetUsage = 0;
+};
+
+Operator::Operator(const Operator &other)
+{
+  totalSpentTalkingTime = other.totalSpentTalkingTime;
+  totalMessageSent = other.totalMessageSent;
+  totalInternetUsage = other.totalInternetUsage;
+};
+
+int Operator::getId() const
+{
+  return id;
+}
+
+int Operator::getDiscountRate() const
+{
+  return discountRate;
+}
+
+double Operator::getTalkingChage() const
+{
+  return talkingCharge;
+}
+
+double Operator::getMessageCost() const
+{
+  return messageCost;
+}
+
+double Operator::getNetworkCharge() const
+{
+  return networkCharge;
+}
+
+int Operator::getTotalSpentTalkingTime() const
+{
+  return totalSpentTalkingTime;
+}
+
+int Operator::getTotalMessageSent() const
+{
+  return totalMessageSent;
+}
+
+double Operator::getTotalInternetUsage() const
+{
+  return totalInternetUsage;
+}
+
+OperatorType Operator::getType() const
+{
+  return type;
+}
+
+void Operator::addTalkingTime(int minutes)
+{
+  if (minutes < 0)
+  {
+    return;
+  }
+  totalSpentTalkingTime += minutes;
+
+ };
+
+void Operator::addTotalMessageSent(int quantity)
+{
+  if (quantity < 0)
+  {
+    return;
+  }
+  totalMessageSent += quantity;
+};
+
+void Operator::addTotalInternetUsage(double gb)
+{
+  if (gb < 0)
+  {
+    return;
+  }
+  totalInternetUsage += gb;
+
+};
+
+//to string 
+
+std::string Operator::toString() const
+{
+  std::stringstream aux;
+
+  aux << "Operator #" << std::fixed <<std::setprecision(2) << getId()
+  <<"Total Spent Talking time: " << std::fixed <<std::setprecision(2) <<  getTotalSpentTalkingTime()
+  << "Total message sent: " << std::fixed <<std::setprecision(2) << getTotalMessageSent()
+  << "Total internet ussage" << std::fixed <<std::setprecision(2) << getTotalInternetUsage();
+
+  return aux.str();
+}
+
 
 #endif
