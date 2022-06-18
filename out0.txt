@@ -1,0 +1,9 @@
+Operator0 13 0 0.00
+Operator1 13 10 14.40
+Operator2 0 0 0.00
+Customer 0 2.50 1.32
+Customer 1 0.00 5.38
+Customer 2 0.00 3.29
+more talk 13
+more sms 7
+more gb 14

@@ -51,10 +51,10 @@ Customer::Customer(int ID, std::string N, int A, Operator* ope, double limit)
  name = N;
  age = A;
  op = ope;
- totalSpentTalkingTime = op->getTotalSpentTalkingTime();
- totalMessageSent = op->getTotalMessageSent();
- totalInternetUsage = op->getTotalInternetUsage();
-};
+ totalSpentTalkingTime = 0;
+ totalMessageSent = 0;
+ totalInternetUsage = 0;
+}
 
 Customer::Customer(const Customer &other)
 {
@@ -65,15 +65,15 @@ Customer::Customer(const Customer &other)
   totalInternetUsage = other.totalInternetUsage;
   name = other.name;
   op = other.op;
-  bill = new Bill(*other.bill);
-};
+  bill = other.bill;
+}
 
 Customer::~Customer()
 {
   delete bill;
   bill = 0;
   op = 0;
-};
+}
 
 int Customer::getId() const
 {
@@ -172,9 +172,9 @@ std::string Customer::toString() const
 {
   std::stringstream aux;
 
-  aux << "Customer #" << std::fixed <<std::setprecision(2) << getId()
-  <<"Total Money Spend: " << std::fixed <<std::setprecision(2) <<  bill->getTotalMoneySpent()
-  << "Current Debt: " << std::fixed <<std::setprecision(2) << bill->getCurrentDebt();
+  aux << "Customer " << std::fixed <<std::setprecision(2) << getId()
+  <<" " << std::fixed <<std::setprecision(2) <<  bill->getTotalMoneySpent()
+  << " " << std::fixed <<std::setprecision(2) << bill->getCurrentDebt();
   return aux.str();
 }
 

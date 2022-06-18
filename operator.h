@@ -59,14 +59,20 @@ Operator::Operator(int ID, double TC, double MC, double NC, int discount, Operat
   totalSpentTalkingTime = 0;
   totalMessageSent = 0;
   totalInternetUsage = 0;
-};
+}
 
 Operator::Operator(const Operator &other)
 {
+  id = other.id;
+  talkingCharge = other.talkingCharge;
+  messageCost = other.messageCost;
+  networkCharge = other.networkCharge;
+  discountRate = other.discountRate;
+  type = other.type;
   totalSpentTalkingTime = other.totalSpentTalkingTime;
   totalMessageSent = other.totalMessageSent;
   totalInternetUsage = other.totalInternetUsage;
-};
+}
 
 int Operator::getId() const
 {
@@ -121,7 +127,7 @@ void Operator::addTalkingTime(int minutes)
   }
   totalSpentTalkingTime += minutes;
 
- };
+ }
 
 void Operator::addTotalMessageSent(int quantity)
 {
@@ -130,7 +136,7 @@ void Operator::addTotalMessageSent(int quantity)
     return;
   }
   totalMessageSent += quantity;
-};
+}
 
 void Operator::addTotalInternetUsage(double gb)
 {
@@ -140,7 +146,7 @@ void Operator::addTotalInternetUsage(double gb)
   }
   totalInternetUsage += gb;
 
-};
+}
 
 //to string 
 
@@ -148,10 +154,10 @@ std::string Operator::toString() const
 {
   std::stringstream aux;
 
-  aux << "Operator #" << std::fixed <<std::setprecision(2) << getId()
-  <<"Total Spent Talking time: " << std::fixed <<std::setprecision(2) <<  getTotalSpentTalkingTime()
-  << "Total message sent: " << std::fixed <<std::setprecision(2) << getTotalMessageSent()
-  << "Total internet ussage" << std::fixed <<std::setprecision(2) << getTotalInternetUsage();
+  aux << "Operator" << std::fixed <<std::setprecision(2) << getId()
+  <<" " << std::fixed <<std::setprecision(2) <<  getTotalSpentTalkingTime()
+  << " " << std::fixed <<std::setprecision(2) << getTotalMessageSent()
+  << " " << std::fixed <<std::setprecision(2) << getTotalInternetUsage();
 
   return aux.str();
 }

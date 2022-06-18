@@ -34,21 +34,21 @@ Bill::Bill()
   limitAmount = 0;
   currentDebt = 0;
   totalMoneySpent = 0;
-};
+}
 
 Bill::Bill(double amount)
 {
   limitAmount = amount > 0? amount : 0;
   currentDebt = 0;
   totalMoneySpent = 0;
-};
+}
 
 Bill::Bill(const Bill &other)
 {
   limitAmount = other.limitAmount;
   currentDebt = other.currentDebt;
   totalMoneySpent = other.totalMoneySpent;
-};
+}
 
 double Bill::getLimitAmount() const
 {
@@ -75,23 +75,23 @@ void Bill::add(double charges)
   currentDebt += charges;
 }
 
-void Bill::pay(double pay)
+void Bill::pay(double amount)
 {
- if (pay <= 0)
+ if (amount <= 0)
  {
    return;
  }
- if (pay > currentDebt)
+ if (amount > currentDebt)
  {
    totalMoneySpent += currentDebt;
    currentDebt = 0;
  }
 else
 {
-  currentDebt -= pay;
-  totalMoneySpent +=pay;
+  currentDebt -= amount;
+  totalMoneySpent +=amount;
 }
-};
+}
 
 void Bill::changeTheLimit(double newLimit)
 {
@@ -104,7 +104,7 @@ void Bill::changeTheLimit(double newLimit)
     return;
   }
   limitAmount = newLimit;
-};
+}
 
 bool Bill::check(double charges)
 {
@@ -116,6 +116,6 @@ bool Bill::check(double charges)
   {
     return false;
   }
-};
+}
 
 #endif

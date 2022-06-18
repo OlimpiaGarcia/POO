@@ -27,15 +27,13 @@ InternetOperator::InternetOperator(int ID, double TC, double MC, double NC, int 
   : Operator(ID, TC, MC, NC, discount, t)
 {
 
-};
+}
 
 InternetOperator::InternetOperator(const InternetOperator &other)
-: Operator(other.id, other.talkingCharge, other.messageCost, other.networkCharge, other.discountRate, other.type)
+: Operator(other)
 {
-  totalSpentTalkingTime = other.totalSpentTalkingTime;
-  totalMessageSent = other.totalMessageSent;
-  totalInternetUsage = other.totalInternetUsage;
-};
+  
+}
 
 double InternetOperator::calculateTalkingCost (int minutes, int age)
 {
@@ -49,7 +47,7 @@ double InternetOperator::calculateTalkingCost (int minutes, int age)
   }
   return talkingCharge * minutes;
 
-};
+}
 
 double InternetOperator::calculateMessageCost(int quantity, int thisOpid, int otherOpId)
 {
@@ -63,7 +61,7 @@ double InternetOperator::calculateMessageCost(int quantity, int thisOpid, int ot
   }
   return messageCost * quantity;
   
-};
+}
 
 double InternetOperator::calculateNetworkCost(double gb)
 {
@@ -76,7 +74,7 @@ double InternetOperator::calculateNetworkCost(double gb)
     return networkCharge * (gb-1);
   }
   return networkCharge *gb;
-};
+}
 
 
 #endif

@@ -25,16 +25,14 @@ VoxOperator::VoxOperator(int ID, double TC, double MC, double NC, int discount, 
   : Operator(ID, TC, MC, NC, discount, t)
 {
 
-};
+}
 
 //constructor copia que invoca a operator
 VoxOperator::VoxOperator(const VoxOperator &other)
-: Operator(other.id, other.talkingCharge, other.messageCost, other.networkCharge, other.discountRate, other.type)
+: Operator(other)
 {
-  totalSpentTalkingTime = other.totalSpentTalkingTime;
-  totalMessageSent = other.totalMessageSent;
-  totalInternetUsage = other.totalInternetUsage;
-};
+
+}
 
 
 double VoxOperator::calculateTalkingCost (int minutes, int age)
@@ -48,7 +46,7 @@ double VoxOperator::calculateTalkingCost (int minutes, int age)
     return (talkingCharge * minutes) - (messageCost * minutes * (discountRate/100.0)); 
   }
   return (talkingCharge * minutes);
-};
+}
 
 double VoxOperator::calculateMessageCost(int quantity, int thisOpid, int otherOpId)
 {
@@ -63,7 +61,7 @@ double VoxOperator::calculateMessageCost(int quantity, int thisOpid, int otherOp
   }
   return cost;
   
-};
+}
 
 double VoxOperator::calculateNetworkCost(double gb)
 {
@@ -74,6 +72,6 @@ double VoxOperator::calculateNetworkCost(double gb)
 
   return networkCharge * gb;
   
-};
+}
 
 #endif
