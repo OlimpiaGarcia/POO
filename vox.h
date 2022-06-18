@@ -1,8 +1,8 @@
 // =========================================================
 // File: vox.h
-// Author:
-// Date:
-// Description:
+// Author: Olimpia García Huerta
+// Date: 18/06/2022
+// Description: this file creates an vox operator
 // =========================================================
 
 #ifndef VOXOPERATOR_H

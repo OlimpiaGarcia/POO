@@ -1,8 +1,8 @@
 // =========================================================
 // File: customer.h
-// Author:
-// Date:
-// Description:
+// Author: Olimpia Garcia Huerta
+// Date: 18/06/2022
+// Description: thiss file create a customer
 // =========================================================
 #ifndef CUSTOMER_H
 #define CUSTOMER_H

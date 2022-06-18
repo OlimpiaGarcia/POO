@@ -1,8 +1,8 @@
 // =========================================================
 // File: operator.h
-// Author:
-// Date:
-// Description:
+// Author: Olimpia Helena Garcia Huerta
+// Date: 18/06/2022
+// Description: this file create an operator depending of type
 // =========================================================
 
 #ifndef OPERATOR_H
@@ -154,7 +154,7 @@ std::string Operator::toString() const
 {
   std::stringstream aux;
 
-  aux << "Operator" << std::fixed <<std::setprecision(2) << getId()
+  aux << "Operator " << std::fixed <<std::setprecision(2) << getId()
   <<" " << std::fixed <<std::setprecision(2) <<  getTotalSpentTalkingTime()
   << " " << std::fixed <<std::setprecision(2) << getTotalMessageSent()
   << " " << std::fixed <<std::setprecision(2) << getTotalInternetUsage();

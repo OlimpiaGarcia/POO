@@ -1,21 +1,21 @@
-Operator0 336 107 124.45
-Operator1 64 17 0.00
-Operator2 49 34 18.41
-Operator3 233 58 99.78
-Operator4 164 82 60.61
-Operator5 234 69 98.02
-Operator6 282 179 136.08
-Operator7 200 52 54.04
-Operator8 228 153 108.81
-Operator9 113 124 131.18
-Operator10 375 170 156.03
-Operator11 199 95 127.57
-Operator12 192 45 146.32
-Operator13 218 57 93.09
-Operator14 152 105 113.97
-Operator15 484 230 300.99
-Operator16 293 150 140.85
-Operator17 227 101 115.52
+Operator 0 336 107 124.45
+Operator 1 64 17 0.00
+Operator 2 49 34 18.41
+Operator 3 233 58 99.78
+Operator 4 164 82 60.61
+Operator 5 234 69 98.02
+Operator 6 282 179 136.08
+Operator 7 200 52 54.04
+Operator 8 228 153 108.81
+Operator 9 113 124 131.18
+Operator 10 375 170 156.03
+Operator 11 199 95 127.57
+Operator 12 192 45 146.32
+Operator 13 218 57 93.09
+Operator 14 152 105 113.97
+Operator 15 484 230 300.99
+Operator 16 293 150 140.85
+Operator 17 227 101 115.52
 Customer 0 272.37 43.61
 Customer 1 120.90 34.60
 Customer 2 95.24 65.62
@@ -31,6 +31,6 @@ Customer 11 120.77 120.51
 Customer 12 158.81 36.35
 Customer 13 89.12 107.97
 Customer 14 153.88 0.24
-more talk 211
-more sms 177
-more gb 234
+more talk a 211
+more sms f 177
+more gb a 234

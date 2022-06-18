@@ -1,8 +1,8 @@
 // =========================================================
 // File: bill.h
 // Author: Olimpia García Huerta
-// Date:
-// Description:
+// Date: 18/06/2022
+// Description: This file contain the bill from as customer
 // =========================================================
 
 #ifndef BILL_H

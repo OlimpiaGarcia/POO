@@ -1,8 +1,8 @@
 // =========================================================
 // File: main.cpp
-// Author:
-// Date:
-// Description:
+// Author: Olimpia Garcia Huerta
+// Date: 18/06/2022
+// Description: this is the main file
 // To compile: g++ -std=c++11 main.cpp -o app
 // To execute: ./app input_file output_file
 // =========================================================
@@ -158,9 +158,9 @@ for (Customer *C: customers)
   } 
 }
 
-outputFile << "more talk " << moretalk->getTotalSpentTalkingTime() << "\n";
-outputFile << "more sms " << moresms->getTotalMessageSent() << "\n";
-outputFile << "more gb " << moregb->getTotalInternetUsage() << "\n";
+outputFile << "more talk " << moretalk->getName() << " " << moretalk->getTotalSpentTalkingTime() << "\n";
+outputFile << "more sms " << moresms->getName() << " "  << moresms->getTotalMessageSent() << "\n";
+outputFile << "more gb " << moregb->getName() << " " << moregb->getTotalInternetUsage() << "\n";
 
 inputFile.close();
 outputFile.close();

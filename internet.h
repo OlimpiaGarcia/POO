@@ -1,8 +1,8 @@
 // =========================================================
 // File: vox.h
-// Author:
-// Date:
-// Description:
+// Author: Olimpia Helena Garcia Huert
+// Date: 18/06/2022
+// Description: this file creates an internet operator
 // =========================================================
 
 #ifndef InternetOperator_H
